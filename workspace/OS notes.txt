@@ -1,0 +1,92 @@
+Process Management & CPU Scheduling
+A process is a program in execution. It contains the program code, current activity (via the program counter), stack (temporary data), and heap (dynamic memory).
+
+Process States
+Processes cycle through several states during their lifecycle:
+
+New: The process is being created.
+
+Ready: Waiting to be assigned to a processor.
+
+Running: Instructions are being executed.
+
+Waiting/Blocked: Waiting for some event (like I/O completion).
+
+Terminated: The process has finished execution.
+
+CPU Scheduling Algorithms
+The OS scheduler selects which process in the ready queue gets CPU time.
+
+First-Come, First-Served (FCFS): Non-preemptive. Simple, but suffers from the Convoy Effect, where short processes wait behind a long one.
+
+Shortest Job First (SJF): Gives the highest priority to the process with the shortest next CPU burst. Mathematically optimal for minimizing average waiting time, but difficult to predict actual burst times.
+
+Round Robin (RR): Preemptive. Each process gets a small unit of CPU time (a time quantum, usually 10–100ms). Excellent for time-sharing systems but highly sensitive to quantum size.
+
+Priority Scheduling: Allocates the CPU based on priority levels. A major risk here is Starvation (low-priority processes waiting indefinitely), which is solved by Aging (gradually increasing a process's priority over time).
+
+
+Process Synchronization & Concurrency
+When multiple processes or threads share data, concurrent access can lead to data inconsistency. This is known as a Race Condition.
+The Critical Section Problem
+The critical section is a code segment where shared resources are accessed. Any solution must satisfy three requirements: 
+Mutual Exclusion: If process $P_i$ is executing in its critical section, no other processes can execute in their critical sections for that shared resource.
+Progress: If no process is in its critical section and some want in, the selection of the next process cannot be postponed indefinitely.
+Bounded Waiting: There must be a limit on the number of times other processes can enter their critical sections after a process has made a request to enter its own.
+
+Synchronization Tools
+Semaphores: Integer variables accessed via two atomic operations: wait() (or P) and signal() (or V).
+
+Counting Semaphore: Value can range over an unrestricted domain (used for resource allocation).
+
+Binary Semaphore: Value can only be 0 or 1 (acts like a Mutex).
+
+Mutex (Mutual Exclusion Lock): A software tool used to protect critical regions by locking and unlocking access.
+
+Deadlocks
+A deadlock occurs when a set of processes are blocked because each process holds a resource and waits for another resource held by some other process in the set.
+The Four Necessary Conditions (Coffman Conditions)
+Deadlock can arise if and only if all four conditions hold simultaneously:
+
+Mutual Exclusion: At least one resource must be held in a non-shareable mode.
+
+Hold and Wait: A process must be holding at least one resource and waiting to acquire additional resources held by others.
+
+No Preemption: Resources cannot be forcibly taken from a process; they must be released voluntarily.
+
+Circular Wait: A closed chain of processes exists, where each process holds one or more resources that are needed by the next process in the chain.
+Handling Deadlocks
+Prevention: Design the system to eliminate at least one of the Coffman conditions.
+
+Avoidance: Dynamically check resource allocation states using algorithms like the Banker's Algorithm to ensure the system remains in a "Safe State."
+
+Detection and Recovery: Allow deadlocks to occur, detect them via a Wait-For Graph, and recover by aborting processes or preempting resources.
+Memory Management
+Paging
+Paging is a memory management scheme that eliminates the need for contiguous allocation of physical memory.
+
+Logical Memory is broken into fixed-size blocks called Pages.
+
+Physical Memory is broken into fixed-size blocks called Frames.
+
+A Page Table maps logical pages to physical frames.
+Virtual Memory & Page Replacement
+Virtual memory allows the execution of processes that are not completely in physical memory, mapping user logical memory to disk space. When a process requests a page not currently in RAM, a Page Fault occurs.
+
+Common Page Replacement Algorithms:
+
+FIFO (First-In, First-Out): Simplest to implement, but can suffer from Belady's Anomaly (where adding more page frames results in more page faults).
+
+LRU (Least Recently Used): Replaces the page that has not been used for the longest period. High performance, but requires hardware support to track timestamps.
+
+Optimal (OPT): Replaces the page that will not be used for the longest period in the future. Used purely as a benchmark since predicting the future is impossible.
+
+Storage & File Systems
+File Allocation Methods
+The OS determines how files are mapped onto physical disk blocks.
+
+Contiguous Allocation: Each file occupies a contiguous set of blocks on the disk. Great read performance (sequential access), but suffers heavily from external fragmentation.
+
+Linked Allocation: Each file is a linked list of disk blocks. No external fragmentation, but tracking pointers requires space, and direct access is highly inefficient.
+
+Indexed Allocation (e.g., File Allocation Table / FAT): Brings all pointers together into one location called an index block. Supports efficient direct access without external fragmentation.

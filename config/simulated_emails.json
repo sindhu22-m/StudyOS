@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mail-1",
+    "sender": "prof.roberts@university.edu",
+    "subject": "DBMS Midterm Exam Details",
+    "date": "2026-06-27T09:15:00",
+    "body": "Hi class, just a reminder that the DBMS midterm exam is scheduled for Tuesday, July 7th at 10:00 AM in Hall B. The exam will cover Chapters 1 through 5 (Relational Model, SQL, ER Diagrams, Relational Algebra). Please prepare accordingly. Bring a simple calculator for relational cost estimations. No laptops/notes allowed."
+  },
+  {
+    "id": "mail-2",
+    "sender": "canvas-notifications@university.edu",
+    "subject": "New Assignment: OS Lab 3 - Producer-Consumer Problem",
+    "date": "2026-06-26T16:45:00",
+    "body": "A new assignment has been posted for Operating Systems: 'OS Lab 3 - Thread Synchronization'. The deadline for submission is Friday, July 3rd at 11:59 PM. Please submit your source code and design documentation in a zip file. Submissions after the deadline will receive a 10% penalty per day."
+  },
+  {
+    "id": "mail-3",
+    "sender": "library-services@university.edu",
+    "subject": "Overdue Book Notification: Database System Concepts",
+    "date": "2026-06-25T11:00:00",
+    "body": "Dear Student, the library book 'Database System Concepts (7th Edition)' you checked out is due on Wednesday, July 1st. Please renew the book online or return it to the front desk to avoid overdue fines."
+  },
+  {
+    "id": "mail-4",
+    "sender": "ta.support@university.edu",
+    "subject": "DBMS Office Hours Cancelled Today",
+    "date": "2026-06-28T08:30:00",
+    "body": "Hello DBMS students, office hours for today (June 28th) are cancelled due to a schedule conflict. We will resume normal office hours tomorrow at 3:00 PM."
+  }
+]

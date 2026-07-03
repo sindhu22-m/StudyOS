@@ -1,0 +1,59 @@
+DATABASE MANAGEMENT SYSTEMS (DBMS) - STUDY NOTES
+=================================================
+Exam Date: Tuesday, July 7th at 10:00 AM (Location: Hall B)
+Syllabus Coverage: Chapters 1 to 5
+
+CHAPTER 1: INTRODUCTION TO DATABASES
+-------------------------------------
+- Database Management System (DBMS): Software package to store, manage, and retrieve data.
+- Data Redundancy & Inconsistency: Centralized control avoids duplicate copies of data.
+- Data Independence:
+  * Physical Data Independence: Ability to modify physical schema without changing logical schema.
+  * Logical Data Independence: Ability to modify logical schema without changing application programs.
+- Three-Schema Architecture:
+  1. Internal level: Describes physical storage structure.
+  2. Conceptual level: Describes structure of the entire database for community of users (logical).
+  3. External level: Describes part of database that a particular user group is interested in (views).
+
+CHAPTER 2: THE RELATIONAL MODEL
+--------------------------------
+- Relation: A table with columns (attributes) and rows (tuples).
+- Keys:
+  * Superkey: A set of attributes that uniquely identifies a tuple.
+  * Candidate Key: A minimal superkey (no proper subset is a superkey).
+  * Primary Key: The candidate key chosen by the database designer to uniquely identify tuples.
+  * Foreign Key: Attributes in one relation that reference the primary key of another relation. Exposes referential integrity constraints.
+
+CHAPTER 3: SQL (STRUCTURED QUERY LANGUAGE)
+-------------------------------------------
+- DDL (Data Definition Language): CREATE TABLE, ALTER TABLE, DROP TABLE.
+- DML (Data Manipulation Language): SELECT, INSERT, UPDATE, DELETE.
+- Joins:
+  * INNER JOIN: Returns records that have matching values in both tables.
+  * LEFT JOIN: Returns all records from the left table, and matched records from the right.
+  * RIGHT JOIN: Returns all records from the right table, and matched records from the left.
+  * FULL JOIN: Returns all records when there is a match in either left or right table.
+- Aggregate Functions: SUM, AVG, COUNT, MIN, MAX. Used with GROUP BY and HAVING clauses.
+
+CHAPTER 4: ENTITY-RELATIONSHIP (ER) MODEL
+------------------------------------------
+- Entity: An object that exists and is distinguishable from others (e.g., Student, Course).
+- Relationship: Association among several entities (e.g., Student takes Course).
+- Attributes:
+  * Simple vs. Composite: Simple cannot be divided (Age); Composite can be divided (Name into First, Last).
+  * Single-valued vs. Multi-valued: Single has one value (SSN); Multi-valued can have many (PhoneNumbers).
+  * Derived Attribute: Calculated from other attributes (Age from DateOfBirth).
+- Cardinality Ratios: One-to-One (1:1), One-to-Many (1:N), Many-to-Many (N:M).
+
+CHAPTER 5: RELATIONAL ALGEBRA
+------------------------------
+- Procedural query language consisting of a set of operations.
+- Fundamental Operations:
+  1. Selection (sigma): Selects tuples satisfying a predicate. Syntax: σ_predicate(Relation)
+  2. Projection (pi): Selects specified columns. Syntax: π_col1, col2(Relation)
+  3. Cartesian Product (cross): Combines info from two relations. Syntax: R x S
+  4. Union (cup): Combines tuples from two union-compatible relations. Syntax: R ∪ S
+  5. Set Difference (minus): Tuples in R but not in S. Syntax: R - S
+- Additional Operations:
+  * Natural Join (bowtie): Join based on common attributes. Syntax: R ⋈ S
+  * Rename (rho): Renames attributes or relations. Syntax: ρ_new_name(Relation)

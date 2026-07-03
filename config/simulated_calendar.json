@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cal-1",
+    "title": "DBMS Lecture: Relational Algebra & Calculus",
+    "start": "2026-06-29T10:00:00",
+    "end": "2026-06-29T11:30:00",
+    "description": "Weekly DBMS lecture covering relational operators."
+  },
+  {
+    "id": "cal-2",
+    "title": "Operating Systems Lecture: Semaphores",
+    "start": "2026-06-30T09:00:00",
+    "end": "2026-06-30T10:30:00",
+    "description": "OS Lecture on process coordination and semaphores."
+  },
+  {
+    "id": "cal-3",
+    "title": "DBMS Class: SQL Joins and Aggregation",
+    "start": "2026-07-01T10:00:00",
+    "end": "2026-07-01T11:30:00",
+    "description": "Hands-on SQL lecture."
+  },
+  {
+    "id": "cal-4",
+    "title": "OS Lab 3: Deadlocks",
+    "start": "2026-07-02T14:00:00",
+    "end": "2026-07-02T16:00:00",
+    "description": "Lab session on banker's algorithm."
+  },
+  {
+    "id": "cal-5",
+    "title": "Dinner with study group",
+    "start": "2026-07-03T19:00:00",
+    "end": "2026-07-03T21:00:00",
+    "description": "Social dinner, no academic talk."
+  },
+  {
+    "id": "cal-1782843380",
+    "title": "Study DBMS: Chapters 1 to 5",
+    "start": "2026-07-01T08:00:00",
+    "end": "2026-07-01T10:00:00",
+    "description": "Study session covering DBMS chapters 1 to 5 including Relational Model, SQL, ER Diagrams, and Relational Algebra in preparation for the exam on July 7th."
+  },
+  {
+    "id": "cal-1782843996",
+    "title": "Study OS: Lab 3 - Producer-Consumer Problem",
+    "start": "2026-06-29T11:30:00",
+    "end": "2026-06-29T13:30:00",
+    "description": "Study session dedicated to OS Lab 3 assignment on Producer-Consumer Problem"
+  }
+]
