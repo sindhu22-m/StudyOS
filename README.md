@@ -1,4 +1,4 @@
-# StudyOS 🎓🤖
+# StudyOS 
 
 StudyOS is an AI-powered **Academic Operating System** designed to streamline a student's academic life. By leveraging a multi-agent system powered by the **Google Agent Development Kit (ADK)** and the Gemini API, StudyOS integrates with simulated student tools—inboxes, filesystem-based notes, and study calendars—to dynamically orchestrate exam preparation, track assignment deadlines, search study notes, and schedule study blocks.
 
