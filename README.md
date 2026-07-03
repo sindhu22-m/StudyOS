@@ -4,7 +4,7 @@ StudyOS is an AI-powered **Academic Operating System** designed to streamline a 
 
 ---
 
-## 🖥️ Dashboard Mockup
+##  Dashboard Mockup
 
 Below is a preview of the StudyOS interface, showcasing the interactive chat with the Academic Coordinator, the integrated student calendar, recent inbox emails, and academic notes.
 
@@ -12,7 +12,7 @@ Below is a preview of the StudyOS interface, showcasing the interactive chat wit
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 1. **Multi-Agent Orchestration**: Powered by Google ADK. A central `CoordinatorAgent` acts as the router and task planner, delegating specific sub-tasks to specialized sub-agents.
 2. **Email Extraction (`EmailAgent`)**: Communicates with a custom MCP email toolset to parse inbox messages, identify midterms/finals, and extract assignment deadlines.
@@ -23,7 +23,7 @@ Below is a preview of the StudyOS interface, showcasing the interactive chat wit
 
 ---
 
-## 🔄 Agentic Workflow & Architecture
+##  Agentic Workflow & Architecture
 
 The multi-agent system utilizes a hub-and-spoke sequence where the `CoordinatorAgent` directs control to specialized agents. Sub-agents execute their tasks using Model Context Protocol (MCP) servers and return results back to the Coordinator, avoiding complex peer-to-peer routing and keeping control flows deterministic.
 
@@ -75,7 +75,7 @@ sequenceDiagram
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 * **Frontend**: React, Vite, TailwindCSS (for sleek layouts), Lucide React (for UI icons).
 * **Backend**: FastAPI, Uvicorn, Pydantic, PyPDF (for reading PDF note uploads).
@@ -85,7 +85,7 @@ sequenceDiagram
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 StudyOS/
@@ -117,7 +117,7 @@ StudyOS/
 
 ---
 
-## 🚀 Running StudyOS Locally
+##  Running StudyOS Locally
 
 ### 1. Prerequisites
 * Python 3.10+
@@ -157,6 +157,6 @@ Open `http://localhost:5173` in your browser to interact with StudyOS!
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! If you have suggestions or want to add features (like connecting to live Gmail, Google Calendar, or Notion APIs), please fork this repository and create a Pull Request.
